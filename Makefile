@@ -1,7 +1,7 @@
 
 NAME = test
-Q = /opt/quartus/20.1/quartus/bin
-CABLE = $(shell jtagconfig -n | head -n1 | grep -o '^[0-9]\+')
+Q = /opt/quartus/quartus/bin/
+CABLE = $(shell $(Q)/jtagconfig -n | head -n1 | grep -o '^[0-9]\+')
 
 all: compile upload
 
@@ -15,6 +15,6 @@ upload:
 	$(Q)/quartus_pgm -c $(CABLE) $(NAME).cdf
 
 clean:
-	rm -rf db incremental_db output_files test.qws qar_info.json
+	rm -rf db incremental_db output_files $(NAME).qws qar_info.json
 
 .PHONY: all compile upload clean

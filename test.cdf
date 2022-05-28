@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("/home/benni/src/fpga/make-test/output_files/") File("test.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("output_files/") File("test.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
